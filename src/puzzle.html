@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>H5小游戏100例: 拼图</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" />
+	<% htmlWebpackPlugin.files.css.forEach(css => { %>
+		<link rel="stylesheet" href="<%= css %>" />
+	<% }) %>
+</head>
+
+<body>
+	<div class="wrapper puzzle">
+		<div class="puzzle_home"></div>
+		<!-- 选择关卡 -->
+		<div class="puzzle_map" id="puzzleMap">
+			<div class="button" onclick="selectLevel(0)">开始游戏</div>
+			<div class="puzzle_map_footer">
+				难度：
+				<input type="radio" value="1" name="difficulty" class="puzzle_difficulty">
+				<input type="radio" value="2" name="difficulty" class="puzzle_difficulty">
+				<input type="radio" value="3" name="difficulty" class="puzzle_difficulty">
+				<input type="radio" value="4" name="difficulty" class="puzzle_difficulty">
+				<input type="radio" value="5" name="difficulty" class="puzzle_difficulty">
+				<input type="radio" value="6" name="difficulty" class="puzzle_difficulty">
+				<input type="radio" value="7" name="difficulty" class="puzzle_difficulty">
+				<input type="radio" value="8" name="difficulty" class="puzzle_difficulty">
+				<input type="radio" value="9" name="difficulty" class="puzzle_difficulty">
+				<input type="radio" value="10" name="difficulty" class="puzzle_difficulty"> 
+			</div>
+		</div>
+		<!-- 游戏画布 -->
+		<canvas class="puzzle_game" id="puzzleGame"></canvas>
+	</div>
+	<% htmlWebpackPlugin.files.js.forEach(js => { %>
+		<script type="text/javascript" src="<%= js %>"></script>
+	<% }) %>
+</body>
+</html>
